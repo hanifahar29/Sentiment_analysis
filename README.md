@@ -24,22 +24,22 @@ This project performs binary sentiment classification (positive vs. negative) on
 
 ## ⚙️ Workflow
 
-1. **Preprocessing**
+1. [**Preprocessing**](./Code/Preprocessing.ipynb)
    - Case folding
    - Tokenization
    - Stopword removal
    - Stemming
 
-2. **Labeling**
+2. [**Labeling**](./Code/Labeling.ipynb)
    - Lexicon-based sentiment labeling (positive / negative)
 
-3. **Feature Extraction**
+3. [**Feature Extraction**](./Code/feature_extraction.ipynb)
    - TF-IDF Vectorization
 
-4. **Modeling**
+4. [**Modeling**](./Code/modeling.ipynb)
   - Base classifiers: `MultinomialNB`, `LogisticRegression`, `DecisionTree`, `KNN`
   - Ensemble Voting Classifiers: `Soft Voting`
-5. **Evaluation**
+5. ]**Evaluation**](./Code/modeling.ipynb)
    - 5-fold Stratified Cross Validation
    - Metrics: ROC-AUC, Confusion Matrix, Accuracy, Logistic Loss
 
@@ -47,17 +47,17 @@ This project performs binary sentiment classification (positive vs. negative) on
 ### 🧪 ROC-AUC Curve
 Ability to separate classes. Soft Voting outperformed all base classifiers.
 
-<img width="318" height="259" alt="chrome_MaVDmwQ0xg" src="https://github.com/user-attachments/assets/a0df715a-18f6-48fe-a279-6a2c73428ae8" />
+![ROC-AUC Curve](image/roc-auc_curve.png)
 
 ### 📉 Confusion Matrix 
 Shows prediction accuracy for each class. Soft Voting had the most balanced prediction result with the fewest misclassifications.
 
-<img width="556" height="364" alt="chrome_WrKXIUF4T8" src="https://github.com/user-attachments/assets/ef6067b1-656a-4991-bcee-44aea8acb496" />
+![Confusion Matrix](image/confusion_matrix.png)
 
-### 📋 Classification Report Summary
+### 📋 Classification Report 
 Soft Voting consistently achieved the best precision, recall, and F1-score.
 
-<img width="367" height="217" alt="chrome_VslMzQCyo2" src="https://github.com/user-attachments/assets/dec8625b-02a4-455c-af85-ef9a1608585a" />
+![Classification Report](image/classification_report.png)
 
 ### 📉 Logistic Loss 
 Measures probability accuracy of predictions. Lower Log Loss indicates better-calibrated probability predictions. 
